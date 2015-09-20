@@ -2,23 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <style type="text/css">
-        /*
-        #container {
-            position: absolute;
-            left:0;
-            top:0;
-            right: 100%;
-            bottom: 100%;
-            width: 100%;
-            height: 100%;
-        }
-        #central {
-            text-align: center;
-        }
-        */
-    </style>
+    <title>Modal sample - Femodex</title>
+    <link rel="stylesheet" href="../build/css/femodex-modal.css" media="all"/>
 </head>
 <body>
 <div id="container">
@@ -30,15 +15,14 @@
 <script>
 var onClick = function(el){
     Femodex.Modal.factory({
-        message: el.attributes['data-fmx-modal-message'].value,
-        onCancel: function(){alert('Cancel: ' + (el.attributes['data-fmx-modal-oncancel'] ? el.attributes['data-fmx-modal-oncancel'].value : ' default'));}
+        message: el.attributes['data-fmx-modal-message'].value
     }).show();
     return false;
 };
 </script>
 <script src="../vendor/facebook/react.0.13.3.js"></script>
 <script src="../src/Modal.js"></script>
-<script src="../build/Modal.js"></script>
-<script src="../build/ModalContent.js"></script>
+<script src="../build/js/Modal.js"></script>
+<script src="../build/js/ModalContent.js"></script>
 </body>
 </html>

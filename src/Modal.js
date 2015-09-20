@@ -4,7 +4,7 @@ Femodex.Modal = new function(){
         _getMountPoint = function(){
             if (!_mountPoint) {
                 _mountPoint = document.createElement('div');
-                _mountPoint.id = 'femodex-modal';
+                _mountPoint.className = 'fmx-modal-overlay';
                 document.body.appendChild(_mountPoint);
             }
 
@@ -42,6 +42,7 @@ Femodex.Modal = new function(){
                 );
             };
         }(options);
+
         return modal;
     };
 }();

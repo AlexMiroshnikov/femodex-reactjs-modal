@@ -1,0 +1,45 @@
+$zIndexBase: 12000;
+$colorCancel: orangered;
+$colorOk: #75c01a;
+$btnWidthBase: 5em;
+
+@import "reset";
+@import "reset-femodex";
+
+div.fmx-modal-overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: $zIndexBase;
+  background: gray;
+}
+div.fmx-modal-overlay div.fmx-modal-container {
+  width: 25%;
+  margin: 0 auto;
+  background: #fff;
+  z-index: $zIndexBase + 1;
+  padding: 1.5em;
+}
+div.fmx-modal-overlay div.fmx-modal-container button {
+  width: $btnWidthBase;
+  color: #fff;
+  padding: 0.4em 0.2em;
+  cursor: pointer;
+}
+div.fmx-modal-overlay div.fmx-modal-container button.fmx-btn-ok {
+  background: $colorOk;
+  width: $btnWidthBase*1.25;
+  margin-right: 2em;
+}
+div.fmx-modal-overlay div.fmx-modal-container button.fmx-btn-cancel {
+  background: $colorCancel;
+}
+div.fmx-modal-overlay div.fmx-modal-container a.fmx-link-cancel {
+  color: $colorCancel;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}

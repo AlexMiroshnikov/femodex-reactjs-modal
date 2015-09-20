@@ -8,7 +8,10 @@ Femodex.Components.Modal = React.createClass({
             ''
         );
         return (
-            <div>{content}</div>
+            <div className="fmx-modal-container">
+                <a href="#" onClick={this.cancel} className="fmx-link-cancel">&times;</a>
+                {content}
+            </div>
         );
     }
 });
