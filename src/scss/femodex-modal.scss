@@ -1,6 +1,8 @@
 $zIndexBase: 12000;
 $colorCancel: orangered;
 $colorOk: #75c01a;
+$colorNeutralDark: #777;
+$colorNeutralLight: #ccc;
 $btnWidthBase: 5em;
 
 @import "reset";
@@ -19,9 +21,9 @@ div.fmx-modal-overlay {
 div.fmx-modal-overlay div.fmx-modal-container {
   width: 25%;
   margin: 0 auto;
+  padding: 0 1.5em 1.5em;
   background: #fff;
   z-index: $zIndexBase + 1;
-  padding: 1.5em;
 }
 div.fmx-modal-overlay div.fmx-modal-container button {
   width: $btnWidthBase;
@@ -31,15 +33,27 @@ div.fmx-modal-overlay div.fmx-modal-container button {
 }
 div.fmx-modal-overlay div.fmx-modal-container button.fmx-btn-ok {
   background: $colorOk;
-  width: $btnWidthBase*1.25;
+  width: $btnWidthBase*1.75;
   margin-right: 2em;
 }
 div.fmx-modal-overlay div.fmx-modal-container button.fmx-btn-cancel {
   background: $colorCancel;
 }
 div.fmx-modal-overlay div.fmx-modal-container a.fmx-link-cancel {
-  color: $colorCancel;
+  color: $colorNeutralLight;
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
+  font-size: 2em;
+  float: right;
+  line-height: 100%;
+}
+div.fmx-modal-overlay div.fmx-modal-container div.fmx-modal-content {
+  margin: 1em 0;
+  float: left;
+}
+div.fmx-modal-overlay div.fmx-modal-container div.fmx-modal-control {
+  float: none;
+  clear: both;
+  text-align: right;
 }
