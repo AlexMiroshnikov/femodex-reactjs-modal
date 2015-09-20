@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        #container {
+            position: absolute;
+            left:0;
+            top:0;
+            right: 100%;
+            bottom: 100%;
+            width: 100%;
+            height: 100%;
+        }
+        #central {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="central">
+        <p>Link is here, click it: <a href="#" onclick="return onClick();">click me now</a></p>
+    </div>
+</div>
+<script>
+    var onClick = function(){
+        var modal = Femodex.Modal.factory({
+            id: 'the id',
+            message: 'test'
+        });
+        modal.show();
+        return false;
+    };
+</script>
+<script src="../vendor/facebook/react.0.13.3.js"></script>
+<script src="../build/Modal.js"></script>
+</body>
+</html>
