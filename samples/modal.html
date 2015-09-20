@@ -21,10 +21,12 @@
 <body>
 <div id="container">
     <div id="central">
-        <p>Link is here, click it: <a href="#" onclick="return onClick();">click me now</a></p>
+        <p>Link is here, click it: <a href="#" onclick="return onClick(this);" data-modal-message="The message one">click me now</a></p>
+        <p>And <a href="#" onclick="return onClick(this);" data-modal-message="Another message, two">click me for another</a> modal!</p>
     </div>
 </div>
 <script>
+/*
     var onClick = function(){
         var modal = Femodex.Modal.factory({
             id: 'the id',
@@ -33,6 +35,12 @@
         modal.show();
         return false;
     };
+*/
+var onClick = function(el){
+    console.log(el);
+    console.log(el.attributes);
+    console.log(el.attributes['data-modal-message']);
+};
 </script>
 <script src="../vendor/facebook/react.0.13.3.js"></script>
 <script src="../src/Modal.js"></script>
